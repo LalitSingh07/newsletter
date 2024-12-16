@@ -8,226 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><!-->
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"><!--<![endif]-->
-	<style>
-		* {
-			box-sizing: border-box;
-		}
 
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		a[x-apple-data-detectors] {
-			color: inherit !important;
-			text-decoration: inherit !important;
-		}
-
-		#MessageViewBody a {
-			color: inherit;
-			text-decoration: none;
-		}
-
-		p {
-			line-height: inherit
-		}
-
-		.desktop_hide,
-		.desktop_hide table {
-			mso-hide: all;
-			display: none;
-			max-height: 0px;
-			overflow: hidden;
-		}
-
-		.image_block img+div {
-			display: none;
-		}
-
-		sup,
-		sub {
-			font-size: 75%;
-			line-height: 0;
-		}
-
-		#converted-body .list_block ul,
-		#converted-body .list_block ol,
-		.body [class~="x_list_block"] ul,
-		.body [class~="x_list_block"] ol,
-		u+.body .list_block ul,
-		u+.body .list_block ol {
-			padding-left: 20px;
-		}
-
-		@media (max-width:620px) {
-
-			.desktop_hide table.icons-inner,
-			.row-42 .column-2 .block-3.button_block .alignment a,
-			.row-42 .column-2 .block-3.button_block .alignment div,
-			.row-45 .column-2 .block-3.button_block .alignment a,
-			.row-45 .column-2 .block-3.button_block .alignment div,
-			.row-46 .column-2 .block-3.button_block .alignment a,
-			.row-46 .column-2 .block-3.button_block .alignment div,
-			.row-47 .column-2 .block-3.button_block .alignment a,
-			.row-47 .column-2 .block-3.button_block .alignment div {
-				display: inline-block !important;
-			}
-
-			.icons-inner {
-				text-align: center;
-			}
-
-			.icons-inner td {
-				margin: 0 auto;
-			}
-
-			.image_block div.fullWidth {
-				max-width: 100% !important;
-			}
-
-			.mobile_hide {
-				display: none;
-			}
-
-			.row-content {
-				width: 100% !important;
-			}
-
-			.stack .column {
-				width: 100%;
-				display: block;
-			}
-
-			.mobile_hide {
-				min-height: 0;
-				max-height: 0;
-				max-width: 0;
-				overflow: hidden;
-				font-size: 0px;
-			}
-
-			.desktop_hide,
-			.desktop_hide table {
-				display: table !important;
-				max-height: none !important;
-			}
-
-			.row-15 .column-1 .block-1.heading_block td.pad,
-			.row-19 .column-1 .block-1.heading_block td.pad,
-			.row-25 .column-1 .block-1.heading_block td.pad,
-			.row-29 .column-1 .block-1.heading_block td.pad,
-			.row-35 .column-1 .block-1.heading_block td.pad,
-			.row-38 .column-1 .block-1.heading_block td.pad,
-			.row-4 .column-1 .block-1.heading_block td.pad,
-			.row-41 .column-1 .block-1.heading_block td.pad,
-			.row-44 .column-1 .block-1.heading_block td.pad,
-			.row-6 .column-1 .block-1.heading_block td.pad,
-			.row-8 .column-1 .block-1.heading_block td.pad {
-				padding: 10px 5px 5px !important;
-			}
-
-			.row-15 .column-1 .block-1.heading_block h1,
-			.row-19 .column-1 .block-1.heading_block h1,
-			.row-25 .column-1 .block-1.heading_block h1,
-			.row-29 .column-1 .block-1.heading_block h1,
-			.row-35 .column-1 .block-1.heading_block h1,
-			.row-38 .column-1 .block-1.heading_block h1,
-			.row-4 .column-1 .block-1.heading_block h1,
-			.row-41 .column-1 .block-1.heading_block h1,
-			.row-44 .column-1 .block-1.heading_block h1,
-			.row-6 .column-1 .block-1.heading_block h1,
-			.row-8 .column-1 .block-1.heading_block h1 {
-				font-size: 17px !important;
-			}
-
-			.row-39 .column-1 .block-1.image_block .alignment div {
-				margin: 0 auto 0 0 !important;
-			}
-
-			.row-39 .column-2 .block-1.heading_block h1 {
-				font-size: 30px !important;
-			}
-
-			.row-39 .column-2 .block-2.paragraph_block td.pad>div {
-				font-size: 18px !important;
-			}
-
-			.row-42 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-45 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-46 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-47 .column-2 .block-2.paragraph_block td.pad>div {
-				text-align: left !important;
-				font-size: 16px !important;
-			}
-
-			.row-42 .column-2 .block-1.heading_block h2,
-			.row-45 .column-2 .block-1.heading_block h2,
-			.row-46 .column-2 .block-1.heading_block h2,
-			.row-47 .column-2 .block-1.heading_block h2 {
-				text-align: left !important;
-				font-size: 24px !important;
-			}
-
-			.row-42 .column-2 .block-1.heading_block td.pad,
-			.row-45 .column-2 .block-1.heading_block td.pad,
-			.row-46 .column-2 .block-1.heading_block td.pad,
-			.row-47 .column-2 .block-1.heading_block td.pad {
-				padding: 10px 0 !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block .alignment,
-			.row-45 .column-2 .block-3.button_block .alignment,
-			.row-46 .column-2 .block-3.button_block .alignment,
-			.row-47 .column-2 .block-3.button_block .alignment {
-				text-align: left !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block td.pad,
-			.row-45 .column-2 .block-3.button_block td.pad,
-			.row-46 .column-2 .block-3.button_block td.pad,
-			.row-47 .column-2 .block-3.button_block td.pad {
-				padding: 20px 0 10px !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block a,
-			.row-42 .column-2 .block-3.button_block div,
-			.row-42 .column-2 .block-3.button_block span,
-			.row-45 .column-2 .block-3.button_block a,
-			.row-45 .column-2 .block-3.button_block div,
-			.row-45 .column-2 .block-3.button_block span,
-			.row-46 .column-2 .block-3.button_block a,
-			.row-46 .column-2 .block-3.button_block div,
-			.row-46 .column-2 .block-3.button_block span,
-			.row-47 .column-2 .block-3.button_block a,
-			.row-47 .column-2 .block-3.button_block div,
-			.row-47 .column-2 .block-3.button_block span {
-				line-height: 20px !important;
-			}
-
-			.row-1 .column-1 {
-				padding: 10px 20px 30px !important;
-			}
-
-			.row-39 .column-1 {
-				padding: 20px 20px 0 !important;
-			}
-
-			.row-39 .column-2,
-			.row-42 .column-2,
-			.row-45 .column-2,
-			.row-46 .column-2,
-			.row-47 .column-2 {
-				padding: 10px 20px 20px !important;
-			}
-
-			.row-42 .column-1,
-			.row-45 .column-1,
-			.row-46 .column-1,
-			.row-47 .column-1 {
-				padding: 20px 20px 10px !important;
-			}
-		}
-	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
 </head>
 
 <body class="body" style="margin: 0; background-color: #FFFFFF; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
@@ -300,12 +81,7 @@
                                         </button>
                                     </li>
 
-                                    <li class="navili">
-                                        <button style="border: 1px solid white; background-color: #000000; border-radius: 5px;">
-                                        <a href="#announce" style="display: block; color: white; text-align: center; padding: 5px 7px;  font-size: 9px;   text-decoration: none;">Announcements
-                                         </a>
-                                         </button>
-                                    </li>
+                                 
                                 
                                     <li class="navili">
                                         <button style="border: 1px solid white; background-color: #000000; border-radius: 5px;">
@@ -353,12 +129,7 @@
                                                 Other National and International News</a>
                                         </button>
                                     </li>
-                                    <li class="navili">
-                                        <button style="border: 1px solid white; background-color: #000000; border-radius: 5px;">
-                                            <a href="#8" style="display: block; color: white; text-align: center; padding: 5px 7px; font-size: 9px;    text-decoration: none;">
-                                               Events</a>
-                                        </button>
-                                    </li>
+                                    
 
     
                                 </ul>
@@ -745,7 +516,7 @@
 						<tbody>
 							<tr>
 								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+									<table class="row-content stack" id="0" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
 										<tbody>
 											<tr>
 												<td class="column column-1" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ebae36; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: middle; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
@@ -892,7 +663,7 @@
 						<tbody>
 							<tr>
 								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+									<table class="row-content stack" id="1" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
 										<tbody>
 											<tr>
 												<td class="column column-1" width="41.666666666666664%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ebae36; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: middle; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
@@ -1088,7 +859,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-25" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-25" id="2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
@@ -1215,7 +986,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-29" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-29" id="3"  align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
@@ -1416,7 +1187,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-35" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-35" id="4" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
@@ -1496,7 +1267,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-38" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-38" id="5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
@@ -1594,7 +1365,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-41" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-41" id="6" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
@@ -1705,7 +1476,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-44" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+					<table class="row row-44" id="7" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
 								<td>
