@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<head><meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400&amp;display=swap" rel="stylesheet">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400&display=swap');
+    </style>
+    <style type="text/css" media="screen">
+       body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none }
+       a { color:#00adef; text-decoration:none }
+       p { padding:0 !important; margin:0 !important } 
+       img { -ms-interpolation-mode: bicubic;  }
+       .mcnPreviewText { display: none !important; }
+       .spc{ line-height:27px;
+       }
+       .cke_editable,
+       .cke_editable a,
+       .cke_editable span,
+       .cke_editable a span { color: #000001 !important; }
+       .btn{
+       background:#fff; color:#FFF !important; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:18px; padding:12px 30px; text-align:center; border:2px #08bdea solid;}
+       .btn:hover{
+       background:#ffffff; color:#08bdea; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:18px; padding:12px 30px; text-align:center; border:2px #08bdea solid;}	
+       /* Mobile styles */
+       @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+       .mobile-shell { width: 100% !important; min-width: 100% !important; }
+       .bg { background-size: 100% auto !important; -webkit-background-size: 100% auto !important; }
+       .text-header,
+       .m-center { text-align: center !important; }
+       .center { margin: 0 auto !important; }
+       .container { padding: 0px 10px 10px 10px !important;  }
+       .td { width: 100% !important; min-width: 100% !important; }
+       .text-nav { line-height: 28px !important; }
+       .p30 { padding: 15px !important;}
+       .m-br-15 { height: 15px !important; }
+       .p30-15 { padding: 30px 15px !important; }
+       .p40 { padding: 20px !important; }
+       .m-td,
+       .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+       .m-block { display: block !important; }
+       .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+       .fluid-img1 img { width: 50% !important; max-width: 50% !important; height: auto !important; display: block; margin-left: auto; margin-right: auto; }
+       .new-year{
+       font-size:42px !important;
+       }
+       .column,
+       .column-top,
+       .column-empty,
+       .column-empty2,
+       .column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+       .column-empty { padding-bottom: 10px !important; }
+       .column-empty2 { padding-bottom: 20px !important; }
+       .content-spacing { width: 15px !important; }
+       .ram{
+       font-size:36px !important; line-height:60px !important; padding:20px !important }
+       .ram4{
+       font-size:30px !important; line-height:60px !important; padding:20px !important }
+       .ram1{				
+       font-size:40px !important; line-height:50px !important; }
+       .ram2{				
+       font-size:40px !important; line-height:50px !important; padding:20px !important }
+       .rambtn
+       {
+       background: #00adef !important;
+       color: #ffffff !important;
+       font-family: 'Public Sans', sans-serif !important;
+       font-size: 30px !important;
+       line-height: 50px !important;
+       padding: 12px 60px !important;
+       text-align: center !important;
+       }
+       .ram3{
+       font-size:36px !important;
+       padding: 10px !important;
+       line-height: 45px !important;}
+       .spc{ line-height:5px;
+       }
+       .btn2 {
+       background: #fff !important;
+       color: #FFF !important;
+       font-family: 'Public Sans', sans-serif;
+       font-size: 26px  !important;
+       line-height: 23px  !important;
+       padding: 16px 36px  !important;
+       text-align: center  !important;
+       border: 2px #08bdea solid  !important;
+       }
+       .btn22 {
+       background: #00adef !important;
+       color: #FFF !important;
+       font-family: 'Public Sans', sans-serif;
+       font-size: 26px  !important;
+       line-height: 23px  !important;
+       padding: 16px 36px  !important;
+       text-align: center  !important;
+       border: 2px #08bdea solid  !important;
+       }
+       .pc{ font-size:36px !important; line-height:60px !important;
+       }
+       .fluid-img2 img {
+       width: 100% !important;
+       max-width: 100% !important;
+       height: auto !important;
+       }
+       .ppp{ font-size:16px;}
+       }
+       .head-back{
+         background-color: #00adef;
+         color: #0a0a0a;
+       }
+    
+    </style>
+    </head>
+    <body>
+        <div align="center">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4" style="background-color:#f4f4f4;">
+               <tbody >
+            
+                    <tr>
+                        <td class="p30-15" style="padding: 15px 0px 5px 0px; color:#000; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:26px; text-align:center;">Click Here to View <a href="#" target="_blank">Online</a> Version</td>
+                     </tr>
+
+                     <tr>
+                        <td align="center" valign="top">
+                            <table width="800" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+                               <tbody>
+                                <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="head01.jpg" width="100%" mc:edit="image_2" style="max-width:100%;" border="0" alt=""></a>
+                                 </td>
+                                </tr>
+            
+                               <tr>
+                                 <td class="ram fluid-img2" style="font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#323232; text-align:left; padding-bottom:30px; text-align:justify;">
+                                    <div mc:edit="text_33">
+                                       <br><br>
+                                       SIA-India marked three incredible years of fostering connectivity, innovation, and collaboration in the space industry. Over the past three years, we've witnessed incredible achievements in India's space sector, from groundbreaking satellite launches to pioneering research initiatives. Together, we've pushed the boundaries of possibility and inspired the next generation of space enthusiasts. As we reflect on this milestone. We extend our deepest gratitude to our members, partners, and supporters who have been instrumental in shaping our journey. Your passion, dedication, and commitment to advancing space exploration have been the driving force behind our success. 
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="policy.png" width="100%" mc:edit="image_2" style="max-width:100%;" border="0" alt="">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt;padding-top: 20px; padding-bottom: 10px; text-align:left;"><img src="MSME.png" width="80%" mc:edit="image_2" style="max-width:80%;" margin-left: 40px; border="0"  alt="">
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#323232; text-align:left; padding-bottom:30px; text-align:justify;">
+                                    <div mc:edit="text_33">
+                                       The Indian space sector, with nearly 30% of its companies in manufacturing, may find a promising solution to bolster its workforce. The government is contemplating various measures to enhance apprenticeship training across millions of micro, small, and medium enterprises (MSMEs) in India, aiming to cultivate a skilled workforce. <br>
+                                       <br>
+                                       Proposed initiatives include reducing apprenticeship tenure from six to three months, increasing stipend subsidies for
+MSMEs to 50%, providing tax incentives for hiring apprentices, and engaging the private sector to address staff shortages faced by MSMEs, as per a senior government official familiar with the discussions. Depending on fiscal considerations, the government may amend existing apprenticeship schemes or formulate new ones tailored to MSMEs.
+<br><br>
+These enterprises constitute 38.4% of total manufacturing output, contribute 45.03% to total exports, and are vital to
+India's economic fabric. With ongoing dialogues with industry stakeholders, the government aims to unveil a comprehensive plan for MSME apprenticeship hiring by mid-year. India's vast MSME sector comprises an estimated 64 million units, employing 23% of the workforce and contributing 27% to GDP. <br><br>
+To Know More : <a href="https://economictimes.indiatimes.com/news/economy/po-cy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr"><strong>https://economictimes.indiatimes.com/news/economy/po-cy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr</strong></a>
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="earth.png" width="100%" mc:edit="image_2" style="max-width:100%;" border="0" alt="">
+                                 </td>
+                              </tr>
+                              
+                              
+
+
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="madhya.png" width="100%" mc:edit="image_2" style="max-width:100%;" border="0" alt="">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 20px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; padding-bottom:30px; text-align:justify;">
+                                    <div mc:edit="text_33"><img src="madhya01.png" style="max-width:40%; border:1px #CCC solid;  float:right; margin:0px 0px 20px 20px; " alt="">Madhya Pradesh govt has sought very high-resolution satellite data
+                                       and technical support for integrating the NavIC navigation in mobile
+                                       apps to improve the accuracy of geographic information system (GIS)
+                                       surveys among other technical support from the Indian Space Research Organisation (ISRO).
+                                        It will also improve the efficiency of field surveys by the govt departments. NavIC, currently utilized for public vehicle tracking and issuing
+                                       emergency alerts, will now enhance GIS field surveys. Furthermore, the
+                                       government seeks ISRO's support in integrating data collected via the National Remote Sensing Center's mobile app for geo-governance purposes,
+                                       aiding in rural infrastructure development under schemes like MGNREGA. Technical assistance is also sought in utilizing land use, land cover,
+                                       forest changes, and diversity maps through application programming interfaces for MP Geo.
+                                       <br><br>
+                                       To Know More : <a href="https://economictimes.indiatimes.com/news/economy/policy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr"><strong> https://economictimes.indiatimes.com/news/economy/policy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr</strong></a><br><br>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="RLV.png" width="100%" mc:edit="image_2" style="max-width:100%;" border="0" alt="">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 20px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; padding-bottom:30px; text-align:justify;">
+                                    <div mc:edit="text_33"><img src="plane.png" style="max-width:40%; border:1px #CCC solid;  float:right; margin:0px 0px 20px 20px; " alt="">The Indian Space Research Organisation (ISRO) successfully
+                                       conducted its third mission involving the Reusable Launch Vehicle (RLV), named "Pushpak" after the legendary spaceship
+                                       from the Ramayan. Marking a significant stride towards democratizing space access. ISRO Chairperson S Somanath underscored the importance of this endeavor, hailing Pushpak as
+                                       India's bold initiative to render space access more affordable.
+                                       <br><br>
+                                       Central to the innovation is the Reusable Launch Vehicle
+                                       (RLV) concept, wherein the upper stage, housing crucial electronics, is designed for safe return to Earth, paving the way for
+                                       cost-effective missions. This pioneering technology holds
+                                       promise for in-orbit satellite refueling and refurbishment, crucial for mitigating space debris
+                                       <br><br>
+                                       Designed as a fully reusable single-stage-to-orbit (SSTO) vehicle, Pushpak integrates advanced elements from prior demonstrators, heralding a new era in India's space exploration. With its sleek design featuring fuselage, delta wings,vertical tails,and active control surfaces.
+                                       <br><br>
+                                       To Know More : <a href=" https://economictimes.indiatimes.com/news/economy/policy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr"><strong>  https://economictimes.indiatimes.com/news/economy/policy/msme-apprenticeship-may-become-shorter-better-paid/articleshow/108472850.cms?from=mdr</strong></a>
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="lidars.png" width="80%" mc:edit="image_2" style="max-width:80%; padding-left: 10%;" border="0" alt="">
+                                    
+                                 </td>
+                              </tr>
+
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 20px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; padding-bottom:30px; text-align:justify;">
+
+                                    <div mc:edit="text_33"><br><img src="rlv01.png" style="max-width:40%; border:1px #CCC solid;  float:right; margin:0px 0px 20px 20px; " alt="">
+                                       NASA plans to test new lidar technologies from an aircraft this
+                                       summer, aiding Earth science remote sensing and potentially
+                                       improving Moon mapping for Artemis landings. Lidars use
+                                       laser beams to measure distances and provide 3D imaging,
+                                       aiding navigation and data collection. Engineers at NASA’s
+                                       Goddard Space Flight Center are refining lidars for lighter,
+                                       smaller designs with input from small businesses and academia.
+                                       <br><br>
+                                       The Concurrent Artificially Intelligent Spectrometry and
+                                       Adaptive Lidar System (CASALS) offers enhanced capabilities for precise landings. CASALS, funded by NASA’s Earth
+                                       Science Technology Office, will undergo testing in 2024,
+                                       bringing it closer to spaceflight readiness.
+                                       <br><br>
+                                       To Know More : <a href="https://www.nasa.gov/technology/goddard-improves-lidars-for-exploration/"><strong>https://www.nasa.gov/technology/goddard-improves-lidars-for-exploration/</strong></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                            
+                              
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="SIA.png" width="100%" mc:edit="image_2" style="max-width:100%;  border="0" alt="">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="ram2 fluid-img2" style="padding: 0px 30px 0px 30px;  font-size:29px; line-height:43px; text-align:center; font-weight:bold; color:#3c3c3c;">
+                                    <div mc:edit="text_33">
+                                       SIA-India Director General Anil Prakash attends Satellite
+                                       Conference and Expo 2024 in Washington DC</div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#323232; text-align:left; padding-bottom:30px; text-align:justify;">
+                                    <div mc:edit="text_33">
+                                       <br><br>
+                                       SIA-India Director General, Mr Anil Prakash, made a significant stride at the prestigious Satellite Conference
+                                       and Expo 2024, in Washington DC from March 18th to 21st. Mr Prakash embarked on a mission to forge strategic
+                                       alliances by signing several Memorandums of Understanding (MoUs) for cooperation with key stakeholders from
+                                       the space industry. These discussions were pivotal as they paved the way for enhanced participation and engagement in the upcoming India Space Congress, scheduled to take place from June 26th to 28th, 2024, in New Delhi.
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 0px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; text-align:justify;">
+
+                                    <div mc:edit="text_33"><br>
+                                       <img src="page 4 image 1.png" style="max-width:40%; border:3px #00adef solid; padding: 5px;  float:left; margin:0px 0px 0px -10px; " alt="">
+                                       <img src="page 4 image 2.png" style="max-width:40%; padding: 5px; border:3px #00adef solid;  float:right; margin:0px 0px 0px 20px; " alt="">
+
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="ram fluid-img2" style="  font-size:14px; line-height:20px; color:#000000; text-align:center;  text-align:center;">
+                                    <div mc:edit="text_33" style="float:left; width: 40%; text-align:justify;"> <strong>Tom Stroup, President of the Satellite Industry Association Of the USA</strong>
+                                    </div>
+                                    <div mc:edit="text_33" style="float:right; width:43%; text-align:justify;"> <strong>Mr.Prakash with Stephen Su, Director General of ITRI.</strong>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 0px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; text-align:justify;">
+
+                                    <div mc:edit="text_33"><br>
+                                       <img src="page 4 image 3.png" style="max-width:40%; height: 40%; border:3px #00adef solid; padding: 5px;  float:left; margin:0px 0px 0px -10px; " alt="">
+                                       <img src="page 4 image 4.png" style="max-width:40%; padding: 5px; border:3px #00adef solid;  float:right; margin:0px 0px 0px 20px; " alt="">
+
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="  font-size:11px; line-height:20px; color:#000000; text-align:left;  text-align:justify;">
+                                    <div mc:edit="text_33" style="float:left; width: 40%; text-align:justify;"> <strong>Mr.Prakash with Mauro Wajnberg President ABRASAT and Fabio Alencar.
+                                       SIA-India has recently signed a MoU with ABRASAT, Brazil.</strong>
+                                    </div>
+                                    <div mc:edit="text_33" style="float:right; width:43%; text-align:justify;"> <strong>Mr.Prakashmeeting David Logsdon, Sr Director, ITI Space Council at their office at Washington DC. SIA-India also shares a MoU for co-operation with
+                                       them.</strong>
+                                       <br><br>
+                                       <br><br>
+                                       <br><br>
+                                       
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>                             
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                    <img src="new member.png" width="100%" mc:edit="image_2" style="max-width:100%;  border="0" alt="">
+                                 </td>
+                              </tr>
+
+                              <tr>   
+                                 <td class="ram fluid-img2" style="  font-size:11px; line-height:20px; color:#000000; text-align:left;  text-align:justify;">
+                                       <br><br>
+                                          
+                                    </div>
+                                 </td>               
+                              </tr>
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="steer.png" width="100%" mc:edit="image_2" style="max-width:100%; " border="0" alt="">
+                                    
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="padding: 0px 20px 20px 20px; font-family: 'Public Sans', sans-serif; font-size:17px; line-height:20px; color:#000000; text-align:left; padding-bottom:10px; text-align:justify;">
+                                    <br>
+                                    <div mc:edit="text_33"><img src="page 5 image.png" style="max-width:40%; border:1px #CCC solid;  float:right; margin:0px 0px 20px 20px; font-size: 25px; " alt="" ><br><br>Steer Advisors brings forth invaluable expertise across various domains, including Private Equity & Venture Capital Advisory, Mergers
+                                       & Acquisition Advisory, Structured Finance Advisory, and Joint Venture Advisory. Their involvement extends into dynamic sectors, notably Aerospace & Defense. For further insights into their offerings.
+
+                                       <br><br>
+                                       <br><br>
+                                       Explore more about Steer Advisors offerings, visit:   <a href="https://steeradvisors.in/"><strong>https://steeradvisors.in/</strong></a>
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="elena.png" width="100%" mc:edit="image_2" style="max-width:100%; " border="0" alt="">
+                                 </td> 
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="font-family: 'Public Sans', sans-serif; font-size:16px; line-height:20px; color:#000000; background-color: #f8eeee; text-align:left; padding-bottom:30px; text-align:justify; padding-left: 10px ; padding-right: 10px;">
+                                    <div mc:edit="text_33">
+                                       <br><br>
+                                       Elena Geo Tech is Engaged in research, development, manufacturing, and sale of the Indian Regional Navigation Satellite
+                                       System (IRNSS), also known as Navigation with Indian Constellation (NavIC), they specialize in compliant electronic components such as NavIC modules, processors, and devices for various applications including Vehicle Tracking Systems, Personal Monitoring Systems, Aviation and Maritime Tracking Systems, among others. Additionally, they offer consultancy services in the field and related areas.
+                                       
+                                       <br><br>
+                                       <div style="text-align: center;">To know more:   <a href="https://elenageosystems.com/"><strong>https://elenageosystems.com/</strong></a></div>
+ 
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="become member.png" width="100%" mc:edit="image_2" style="max-width:100%; padding-bottom: 15px;" border="0" alt="">
+                                 </td> 
+                              </tr>
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:center;"><img src="page 6.jpg" width="60%" mc:edit="image_2" style="max-width:60%; " border="0" alt="">
+                                 </td> 
+                              </tr>
+                              <tr>
+
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:right;">
+                                    <img src="dg.png" width="90%" mc:edit="image_2" style="max-width:100%; margin-top: 10px; " border="0" alt="">
+
+                                 </td> 
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style="font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; background-color: #f8eeee; text-align:left; padding-bottom:30px; text-align:justify; padding-left: 10px ; padding-right: 10px;">
+                                    <div mc:edit="text_33">
+                                      
+                                       Having comprehensive capabilities in the space sector, India aims to establish itself as a significant participant in the global space economy. My recent trip to Washington DC, coinciding with the Satellite 2024 Conference and Exhibition, has reaffirmed our commitment to nurturing collaborations. While there, I formalized Memorandums of Understanding with ABRASAT of Brazil and the ITI Space Council of the USA. Additionally, I engaged with leaders of space sector associations and corporations. I extended a cordial invitation to all parties to join us at the India Space Congress in New Delhi in June 2024
+                                       <div mc:edit="text_33"><img src="page 7 image.png" style="max-width:25%; border:1px #CCC solid;  float:right; margin:0px 0px 20px 20px; font-size: 2px; " alt="" >
+                                          <br>
+                                          <strong>Mr. Anil Prakash <br>
+                                             Director General, SIA-India</strong>
+                                    
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:right;">
+                                    <img src="india space.png" width="100%" mc:edit="image_2" style="max-width:100%; margin-top: 10px; " border="0" alt="">
+
+                                 </td> 
+                              </tr>
+                              <tr>
+                                 <td class="ram fluid-img2" style=" background-color: #ffffff;  font-size:14px; line-height:20px; color:#000000; text-align:center;  text-align:center;">
+                                    <div mc:edit="text_33" style="float:left; width: 40%; padding-left: 15px; text-align:justify;">
+                                       <br> We are pleased to disclose that The Lalit, Brigade Lane, Barakhambha, New Delhi, has been selected as the distinguished
+                                       venue for the India Space Congress 2024! Prepare for an exceptional gathering of industry leaders and enthusiasts in the heart of
+                                       the nation's capital
+                                    </div>
+                                    <div mc:edit="text_33" style="float:right; width:43%; padding-right: 15px; text-align: justify;"> 
+                                       <br>Registration is now OPEN! Don't miss out on this exciting opportunity! Early Bird Special: Enjoy a 10% discount if you register by April 15th! Don't wait, secure your spot today and join
+                                       us as we explore the frontiers of space exploration!.
+                                       <br><br>
+                                       To Know more :- <a href="https://www.indiaspacecongress.com/register/"> www.indiaspacecongress.com/register/</a>
+                                    </div>
+                                 </td>
+                              </tr>
+
+                              <tr>
+
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:right;">
+                                    <img src="others.png" width="100%" mc:edit="image_2" style="max-width:100%; margin-top: 10px; " border="0" alt="">
+
+                                 </td> 
+                              </tr>
+
+                              <tr>
+                                 <td class="ram fluid-img2" style=" background-color: #ffffff;  font-size:18px; line-height:20px; color:#000000; text-align:center;  ">
+
+                                    <div mc:edit="text_33" style="float:left; background-color: #f0ecec63; width: 40%; height: 60%; padding: 15px; text-align:justify; margin-left: 20px; margin-top: 15px;">
+
+                                       <img src="Asset 19-8.png" alt="" width="75%" height="45%" style="margin-left: 10%; margin-top: 10px;">
+                                       <br>
+                                       <br>
+                                       Isro gets Aviation Week Laureates Award for
+                                       historic Chandrayaan-3 mission
+                                       <br>
+                                       <br>
+                                       <br>
+                                       <div style="text-align: center;"><a href="https://www.indiatoday.in/science/chandrayaan-3/story/isro-gets-aviation-week-laureates-award-for-historic-chandrayaan-3-mission-2516883-2024-03-19" style="color: #0077ef; font-size: 20px;"><strong>Read More  </strong></a></div>
+                                    </div>
+
+                                    <div mc:edit="text_33" style="float:left; background-color: #f0ecec63; width: 40%; height: 60%; padding: 15px; text-align:justify; margin-left: 20px; margin-top: 15px;">
+
+                                       <img src="Asset 20-8.png" alt="" width="75%" height="45%" style="margin-left: 10%; margin-top: 10px;">
+                                       <br>
+                                       <br>
+                                       SpaceX's Starship could fly again as soon
+                                       as early May
+                                       <br>
+                                       <br>
+                                       <br>
+                                       <div style="text-align: center;"><a href="https://www.space.com/spacex-starship-fourth-test-flight-possible-may-2024" style="color: #0077ef; font-size: 20px;"><strong>Read More  </strong></a></div>
+                                    </div>
+
+                                    <div mc:edit="text_33" style="float:right; background-color: #f0ecec63; width: 40%; height: 60%; padding: 15px; text-align:justify; margin-right: 430px; margin-top: 15px;">
+
+                                       <img src="Asset 20-8.png" alt="" width="75%" height="45%" style="margin-left: 10%; margin-top: 10px;">
+                                       <br>
+                                       <br>
+                                       China launches signal relay satellite for mission to moon's hidden side
+                                       <br>
+                                       <br>
+                                       <br>
+                                       <div style="text-align: center;"><a href="https://www.reuters.com/technology/space/china-launches-satellite-queqiao-2-upcoming-lunar-missions-2024-03-20/" style="color: #0077ef; font-size: 20px;"><strong>Read More  </strong></a></div>
+                                    </div>  
+                                 </td>
+                              </tr>
+                              
+                              <tr>
+                                 <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="events.png" width="100%" mc:edit="image_2" style="max-width:100%; padding-bottom: 15px;" border="0" alt="">
+                                 </td> 
+
+                              </tr>
+                              <td class="ram fluid-img2" style="padding: 0px 20px 0px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; text-align:justify;">
+                                 
+                                 <div mc:edit="text_33"><br>
+                                    <img src="Asset 22-8.png" style="max-width:45%; ; padding: 5px;  float:left; margin:0px 0px 0px -10px; " alt="">
+                                    <img src="Asset 23-8.png" style="max-width:45%; padding: 5px; float:right; margin:0px 0px 0px 20px; " alt="">
+                                 </div>
+                              </td>
+                              <tr>
+                                 <td class="ram fluid-img2" style=" background-color: #ffffff;  font-size:18px; line-height:20px; color:#000000; text-align:center;  text-align:center;">
+                                    <div mc:edit="text_33" style="float:left; width: 40%; padding-left: 5px; text-align:left">
+                                       <br>To Know more : <a href="https://www.linkedin.com/feed/up-date/urn:li:activity:7178995064877068290"> www.linkedin.com/feed
+                                          /up-date/urn:li:activity:7178995064877
+                                          068290 </a>
+                                    </div>
+                                    <div mc:edit="text_33" style=" float: right"; margin-left: 25px; text-align:justify;">
+                                       <br>To Know more : <a href="https://www.aerodefindiaexpo.com/"> https://www.aerodefindiaexpo.com/ </a>
+                                    </div>
+                                  
+                                 </td>
+                              </tr>
+                             
+
+
+                              </tr>
+                              <td class="ram fluid-img2" style="padding: 0px 20px 0px 20px; font-family: 'Public Sans', sans-serif; font-size:14px; line-height:20px; color:#000000; text-align:left; text-align:justify;">
+                                 
+                                 <div mc:edit="text_33"><br>
+                                    <img src="Asset 24-8.png" style="max-width:45%; ; padding: 5px;  float:left; margin:0px 0px 0px -10px; " alt="">
+                                    <img src="Asset 25-8.png" style="max-width:45%; max-height: 46%; padding: 5px; float:right; margin:50px 0px 0px 20px; " alt="">
+                                 </div>
+                              </td>
+                              <tr>
+                                 <td class="ram fluid-img2" style=" background-color: #ffffff;  font-size:18px; line-height:20px; color:#000000; text-align:center;  text-align:center;">
+                                    <div mc:edit="text_33" style="float:left; width: 40%; padding-left: 5px; text-align:justify;">
+                                       <br>To Know more : <a href="https://events.spaceinafrica.com/"> https://events.spaceinafrica<br>.com/</a>
+                                    </div>
+                                    <div mc:edit="text_33" style=" float: right"; margin-left: 25px; text-align:justify;">
+                                       <br>To Know more : <a href="https://www.pagesconferences.com/2024/aero-space-engineering-technology">https://www.pagesconferences.com
+                                          <br>/2024/aero-space-engineering-technology</a>
+                                    </div>
+                                    <br><br>
+                                    <br><br>
+                                    <br><br>
+                                  
+                                 </td>
+                              </tr>
+
+
+                              <!-- footer -->
+                              <tr>
+                                 <td>
+                                    <div mc:repeatable="Select" mc:variant="CTA">
+                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tbody><tr>
+                                             <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#00adef">
+                                                   <tbody><tr bgcolor="#fff">
+                                                      <td class="p30-15" style="padding: 10px 0px 15px 0px;">
+                                                      </td>
+                                                   </tr>
+                                                   <tr bgcolor="#2d3194">
+                                                      <td class="p30-15" style="padding: 10px 0px 15px 0px;">
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td class="p30-15" style="padding: 30px 30px;">
+                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody><tr>
+                                                               <td class="h2 white center pb20" style="font-family: 'Public Sans', sans-serif; font-size:16px; line-height:20px; color:#ffffff; text-align:center; padding-bottom:20px; font-weight: 600; letter-spacing:1px;">
+                                                                  <div mc:edit="text_32" class="ram4">For further information please contact us at:</div>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td class="text white center pb30" style="font-family: 'Public Sans', sans-serif; font-size:16px; line-height:28px; color:#ffffff; text-align:center; padding-bottom:30px; letter-spacing:1px;">
+                                                                  <div mc:edit="text_33" class="ram4"><strong>Email</strong>: <a href="mailto:admin@sia-india.com" style="text-decoration:none; color:#FFF;">admin@sia-india.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Phone</strong>: +91-11-4604 8743<br>
+                                                                     <strong>Website</strong>: <a href="https://www.sia-india.com/" target="_blank" style="text-decoration:none; color:#FFF;">www.sia-india.com</a>
+                                                                  </div>
+                                                               </td>
+                                                            </tr>
+                                                            <!-- Button -->
+                                                            <tr>
+                                                               <td align="center" style="padding-bottom: 10px;">
+                                                                  <table border="0" cellspacing="0" cellpadding="0">
+                                                                     <tbody><tr>
+                                                                        <td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.facebook.com/SatcomIndustryAssociation" target="_blank"><img src="https://www.sia-india.com/newsletter/2022/mar-02/fb.png" width="33" height="33" mc:edit="image_12" style="max-width:38px;" border="0" alt=""></a></td>
+                                                                        <td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://twitter.com/satcom_india" target="_blank"><img src="https://www.sia-india.com/newsletter/2022/mar-02/t.png" width="33" height="33" mc:edit="image_13" style="max-width:38px;" border="0" alt=""></a></td>
+                                                                        <td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.linkedin.com/company/satcom-industry-association" target="_blank"><img src="https://www.sia-india.com/newsletter/2022/mar-02/in.png" width="33" height="33" mc:edit="image_14" style="max-width:38px;" border="0" alt=""></a></td>
+                                                                        <td class="img" width="38" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.youtube.com/channel/UCLEK3k9RsdvIdzHVaWiOxHw" target="_blank"><img src="https://www.sia-india.com/newsletter/2022/mar-02/y.png" width="33" height="33" mc:edit="image_15" style="max-width:38px;" border="0" alt=""></a></td>
+                                                                     </tr>
+                                                                  </tbody></table>
+                                                               </td>
+                                                            </tr>
+                                                            <!-- END Button -->
+                                                         </tbody></table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody></table>
+                                             </td>
+                                          </tr>
+                                       </tbody></table>
+                                    </div>
+                                 </td>
+
+                                 
+                              </tr>
+
+                             
+
+                              
+                             
+
+
+
+
+                              
+
+
+
+                            
+
+
+
+
+
+                           </tbody></table>
+                        </td>
+                                
+                     </tr>
+                
+      
+            </tbody></table>
+         </div>
+
+    </body>
+</html>
