@@ -7,226 +7,7 @@
 <![endif]--><!--[if !mso]><!-->
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"><!--<![endif]-->
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		a[x-apple-data-detectors] {
-			color: inherit !important;
-			text-decoration: inherit !important;
-		}
-
-		#MessageViewBody a {
-			color: inherit;
-			text-decoration: none;
-		}
-
-		p {
-			line-height: inherit
-		}
-
-		.desktop_hide,
-		.desktop_hide table {
-			mso-hide: all;
-			display: none;
-			max-height: 0px;
-			overflow: hidden;
-		}
-
-		.image_block img+div {
-			display: none;
-		}
-
-		sup,
-		sub {
-			font-size: 75%;
-			line-height: 0;
-		}
-
-		#converted-body .list_block ul,
-		#converted-body .list_block ol,
-		.body [class~="x_list_block"] ul,
-		.body [class~="x_list_block"] ol,
-		u+.body .list_block ul,
-		u+.body .list_block ol {
-			padding-left: 20px;
-		}
-
-		@media (max-width:620px) {
-
-			.desktop_hide table.icons-inner,
-			.row-42 .column-2 .block-3.button_block .alignment .button,
-			.row-43 .column-2 .block-3.button_block .alignment .button,
-			.row-46 .column-2 .block-3.button_block .alignment .button,
-			.row-47 .column-2 .block-3.button_block .alignment .button,
-			.row-48 .column-2 .block-3.button_block .alignment .button,
-			.row-49 .column-2 .block-3.button_block .alignment .button {
-				display: inline-block !important;
-			}
-
-			.icons-inner {
-				text-align: center;
-			}
-
-			.icons-inner td {
-				margin: 0 auto;
-			}
-
-			.image_block div.fullWidth {
-				max-width: 100% !important;
-			}
-
-			.mobile_hide {
-				display: none;
-			}
-
-			.row-content {
-				width: 100% !important;
-			}
-
-			.stack .column {
-				width: 100%;
-				display: block;
-			}
-
-			.mobile_hide {
-				min-height: 0;
-				max-height: 0;
-				max-width: 0;
-				overflow: hidden;
-				font-size: 0px;
-			}
-
-			.desktop_hide,
-			.desktop_hide table {
-				display: table !important;
-				max-height: none !important;
-			}
-
-			.row-15 .column-1 .block-1.heading_block td.pad,
-			.row-19 .column-1 .block-1.heading_block td.pad,
-			.row-25 .column-1 .block-1.heading_block td.pad,
-			.row-29 .column-1 .block-1.heading_block td.pad,
-			.row-35 .column-1 .block-1.heading_block td.pad,
-			.row-38 .column-1 .block-1.heading_block td.pad,
-			.row-4 .column-1 .block-1.heading_block td.pad,
-			.row-41 .column-1 .block-1.heading_block td.pad,
-			.row-45 .column-1 .block-1.heading_block td.pad,
-			.row-5 .column-1 .block-1.heading_block td.pad {
-				padding: 10px 5px 5px !important;
-			}
-
-			.row-15 .column-1 .block-1.heading_block h1,
-			.row-19 .column-1 .block-1.heading_block h1,
-			.row-25 .column-1 .block-1.heading_block h1,
-			.row-29 .column-1 .block-1.heading_block h1,
-			.row-35 .column-1 .block-1.heading_block h1,
-			.row-38 .column-1 .block-1.heading_block h1,
-			.row-4 .column-1 .block-1.heading_block h1,
-			.row-41 .column-1 .block-1.heading_block h1,
-			.row-45 .column-1 .block-1.heading_block h1,
-			.row-5 .column-1 .block-1.heading_block h1 {
-				font-size: 17px !important;
-			}
-
-			.row-39 .column-2 .block-1.heading_block h1 {
-				font-size: 30px !important;
-			}
-
-			.row-39 .column-1 .block-1.image_block .alignment div {
-				margin: 0 auto 0 0 !important;
-			}
-
-			.row-42 .column-2 .block-1.heading_block h2,
-			.row-43 .column-2 .block-1.heading_block h2,
-			.row-46 .column-2 .block-1.heading_block h2,
-			.row-47 .column-2 .block-1.heading_block h2,
-			.row-48 .column-2 .block-1.heading_block h2,
-			.row-49 .column-2 .block-1.heading_block h2 {
-				text-align: left !important;
-				font-size: 24px !important;
-			}
-
-			.row-42 .column-2 .block-1.heading_block td.pad,
-			.row-43 .column-2 .block-1.heading_block td.pad,
-			.row-46 .column-2 .block-1.heading_block td.pad,
-			.row-47 .column-2 .block-1.heading_block td.pad,
-			.row-48 .column-2 .block-1.heading_block td.pad,
-			.row-49 .column-2 .block-1.heading_block td.pad {
-				padding: 10px 0 !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block .alignment,
-			.row-43 .column-2 .block-3.button_block .alignment,
-			.row-46 .column-2 .block-3.button_block .alignment,
-			.row-47 .column-2 .block-3.button_block .alignment,
-			.row-48 .column-2 .block-3.button_block .alignment,
-			.row-49 .column-2 .block-3.button_block .alignment {
-				text-align: left !important;
-			}
-
-			.row-39 .column-2 .block-2.paragraph_block td.pad>div {
-				font-size: 18px !important;
-			}
-
-			.row-42 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-43 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-46 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-47 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-48 .column-2 .block-2.paragraph_block td.pad>div,
-			.row-49 .column-2 .block-2.paragraph_block td.pad>div {
-				text-align: left !important;
-				font-size: 16px !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block td.pad,
-			.row-43 .column-2 .block-3.button_block td.pad,
-			.row-46 .column-2 .block-3.button_block td.pad,
-			.row-47 .column-2 .block-3.button_block td.pad,
-			.row-48 .column-2 .block-3.button_block td.pad,
-			.row-49 .column-2 .block-3.button_block td.pad {
-				padding: 20px 0 10px !important;
-			}
-
-			.row-42 .column-2 .block-3.button_block span,
-			.row-43 .column-2 .block-3.button_block span,
-			.row-46 .column-2 .block-3.button_block span,
-			.row-47 .column-2 .block-3.button_block span,
-			.row-48 .column-2 .block-3.button_block span,
-			.row-49 .column-2 .block-3.button_block span {
-				line-height: 20px !important;
-			}
-
-			.row-39 .column-1 {
-				padding: 20px 20px 0 !important;
-			}
-
-			.row-39 .column-2,
-			.row-42 .column-2,
-			.row-43 .column-2,
-			.row-46 .column-2,
-			.row-47 .column-2,
-			.row-48 .column-2,
-			.row-49 .column-2 {
-				padding: 10px 20px 20px !important;
-			}
-
-			.row-42 .column-1,
-			.row-43 .column-1,
-			.row-46 .column-1,
-			.row-47 .column-1,
-			.row-48 .column-1,
-			.row-49 .column-1 {
-				padding: 20px 20px 10px !important;
-			}
-		}
-	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
+	
 </head>
 
 <body class="body" style="background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
@@ -335,6 +116,146 @@
 							</tr>
 						</tbody>
 					</table>
+						<table class="row row-25" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="41.666666666666664%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ebae36; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: middle;">
+													<table class="heading_block block-1" width="100%" border="0" cellpadding="5" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody><tr>
+															<td class="pad">
+																<h1 style="margin: 0; color: #ffffff; direction: ltr; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 17px;"><span class="tinyMce-placeholder" style="word-break: break-word;">India Space Congress 2025&nbsp;</span></h1>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+												<td class="column column-2" width="58.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ffffff; padding-bottom: 5px; padding-top: 5px; vertical-align: middle;">
+													<div class="spacer_block block-1" style="height:40px;line-height:40px;font-size:1px;"> </div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 0px; padding-right: 0px; padding-top: 5px; vertical-align: top;">
+													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody><tr>
+															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+																<div class="alignment" align="center" style="line-height:10px">
+																	<div class="fullWidth" style="max-width: 600px;"><img src="./EMINENT SPEAKER_page-0001.jpg" style="display: block; height: auto; border: 0; width: 100%;" width="600" alt="" title="" height="auto"></div>
+																</div>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-26" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ebf5ff; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; border-top: 5px solid #ffffff; padding-top: 5px; vertical-align: top;">
+													<table class="heading_block block-1" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody><tr>
+															<td class="pad">
+																<h3 style="margin: 0; color: #26045d; direction: ltr; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 13px;">Calling all students and academia in the space domain! (Call for Papers)</h3>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-27" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ebf5ff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; vertical-align: top;">
+													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody><tr>
+															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
+																<div class="alignment" align="center">
+																	<div class="fullWidth" style="max-width: 190px;"><img src="https://www.sia-india.com/wp-content/uploads/2025/05/call.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																</div>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+												<td class="column column-2" width="66.66666666666667%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
+													<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tbody><tr>
+															<td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:20px;">
+																<div style="color:#444a5b;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:9px;font-weight:400;letter-spacing:0px;line-height:1.8;text-align:justify;mso-line-height-alt:16px;">
+																	<p style="margin: 0; margin-bottom: 4px;">The&nbsp;<a href="https://www.linkedin.com/company/india-space-congress/" style="text-decoration: underline; color: #0068a5;">India Space Congress</a>&nbsp;2025&nbsp;is offering a&nbsp;Special Academia Discount&nbsp;to make your participation more accessible and impactful. 🌍📚🎓&nbsp;&nbsp;</p>
+																	<p style="margin: 0;"><strong>Student Registration:&nbsp;</strong><br>🔹 Just ₹5,000 per student for full&nbsp;<a href="https://www.linkedin.com/search/results/all/?keywords=%23isc2025&amp;origin=HASH_TAG_FROM_FEED" style="text-decoration: underline; color: #0068a5;">ISC2025</a>&nbsp;access&nbsp;<br><strong>👩‍🏫&nbsp;Group Package:</strong>&nbsp;<br>🔹 ₹20,000 for 5 students + 1 faculty&nbsp;<br>🔹&nbsp;Bonus: Special discounts available for academic partners under&nbsp;<a href="https://www.linkedin.com/company/isro/" style="text-decoration: underline; color: #0068a5;">ISRO</a>'s RESPOND Programme!&nbsp;<br>This is your opportunity to engage with the brightest minds in the Indian and global space ecosystem. 🌌&nbsp;<br>Secure your spot today 👉<a href="https://www.indiaspacecongress.com/#/tickets?lang=en" rel="noopener" target="_blank" style="text-decoration: underline; color: #0068a5;">&nbsp;click here</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-28" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
+													<table class="divider_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody><tr>
+															<td class="pad" style="padding-bottom:25px;padding-top:10px;">
+																<div class="alignment" align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tbody><tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 1px solid #000000;"><span style="word-break: break-word;"> </span></td>
+																		</tr>
+																	</tbody></table>
+																</div>
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 					<table class="row row-5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
@@ -360,7 +281,7 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
+					</table>		
 					<table class="row row-6" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 						<tbody>
 							<tr>
@@ -396,7 +317,7 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;"><img src="./SpectrumWatch.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -458,7 +379,7 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;"><img src="./Trai.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -645,7 +566,7 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;"><img src="./RadiocommunicationBureau.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -772,7 +693,9 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;">
+																		<iframe width="190" height="auto" src="https://www.youtube.com/embed/uqqu8xdW5bo?si=lDJJjte34C4-YHgO" frameborder="0" allowfullscreen style="display: block; border: 0; width: 100%;"></iframe>
+																	</div>
 																</div>
 															</td>
 														</tr>
@@ -923,7 +846,7 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;"><img src="./Cross-IndustryPartnerships.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -984,7 +907,7 @@
 														<tbody><tr>
 															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
 																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
+																	<div class="fullWidth" style="max-width: 190px;"><img src="./Participation.jpeg" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -1052,121 +975,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<table class="row row-25" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="41.666666666666664%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ebae36; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: middle;">
-													<table class="heading_block block-1" width="100%" border="0" cellpadding="5" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tbody><tr>
-															<td class="pad">
-																<h1 style="margin: 0; color: #ffffff; direction: ltr; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 17px;"><span class="tinyMce-placeholder" style="word-break: break-word;">India Space Congress 2025&nbsp;</span></h1>
-															</td>
-														</tr>
-													</tbody></table>
-												</td>
-												<td class="column column-2" width="58.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ffffff; padding-bottom: 5px; padding-top: 5px; vertical-align: middle;">
-													<div class="spacer_block block-1" style="height:40px;line-height:40px;font-size:1px;"> </div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="row row-26" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ebf5ff; color: #000000; width: 600px; margin: 0 auto;" width="600">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; border-top: 5px solid #ffffff; padding-top: 5px; vertical-align: top;">
-													<table class="heading_block block-1" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tbody><tr>
-															<td class="pad">
-																<h3 style="margin: 0; color: #26045d; direction: ltr; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 13px;">Calling all students and academia in the space domain! (Call for Papers)</h3>
-															</td>
-														</tr>
-													</tbody></table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="row row-27" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ebf5ff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; vertical-align: top;">
-													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tbody><tr>
-															<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-top:10px;width:100%;">
-																<div class="alignment" align="center">
-																	<div class="fullWidth" style="max-width: 190px;"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hTQHlnEVJc6lMKqO49vcfAAAAA%26pid%3DApi&amp;f=1&amp;ipt=631a45ef03875c8434fd551ec476bbbff4ff29d45670cf00b9a73f3fec1adf84&amp;ipo=images" style="display: block; height: auto; border: 0; width: 100%;" width="190" alt="" title="" height="auto"></div>
-																</div>
-															</td>
-														</tr>
-													</tbody></table>
-												</td>
-												<td class="column column-2" width="66.66666666666667%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
-													<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tbody><tr>
-															<td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:20px;">
-																<div style="color:#444a5b;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:9px;font-weight:400;letter-spacing:0px;line-height:1.8;text-align:justify;mso-line-height-alt:16px;">
-																	<p style="margin: 0; margin-bottom: 4px;">The&nbsp;<a href="https://www.linkedin.com/company/india-space-congress/" style="text-decoration: underline; color: #0068a5;">India Space Congress</a>&nbsp;2025&nbsp;is offering a&nbsp;Special Academia Discount&nbsp;to make your participation more accessible and impactful. 🌍📚🎓&nbsp;&nbsp;</p>
-																	<p style="margin: 0;"><strong>Student Registration:&nbsp;</strong><br>🔹 Just ₹5,000 per student for full&nbsp;<a href="https://www.linkedin.com/search/results/all/?keywords=%23isc2025&amp;origin=HASH_TAG_FROM_FEED" style="text-decoration: underline; color: #0068a5;">ISC2025</a>&nbsp;access&nbsp;<br><strong>👩‍🏫&nbsp;Group Package:</strong>&nbsp;<br>🔹 ₹20,000 for 5 students + 1 faculty&nbsp;<br>🔹&nbsp;Bonus: Special discounts available for academic partners under&nbsp;<a href="https://www.linkedin.com/company/isro/" style="text-decoration: underline; color: #0068a5;">ISRO</a>'s RESPOND Programme!&nbsp;<br>This is your opportunity to engage with the brightest minds in the Indian and global space ecosystem. 🌌&nbsp;<br>Secure your spot today 👉<a href="https://www.indiaspacecongress.com/#/tickets?lang=en" rel="noopener" target="_blank" style="text-decoration: underline; color: #0068a5;">&nbsp;click here</a></p>
-																</div>
-															</td>
-														</tr>
-													</tbody></table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="row row-28" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
-													<table class="divider_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tbody><tr>
-															<td class="pad" style="padding-bottom:25px;padding-top:10px;">
-																<div class="alignment" align="center">
-																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-																		<tbody><tr>
-																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 1px solid #000000;"><span style="word-break: break-word;"> </span></td>
-																		</tr>
-																	</tbody></table>
-																</div>
-															</td>
-														</tr>
-													</tbody></table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				
 					<table class="row row-29" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
 						<tbody>
 							<tr>
@@ -1775,7 +1584,7 @@
 														<tbody><tr>
 															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
 																<div class="alignment" align="center">
-																	<div style="max-width: 180px;"><img src="https://www.telecomreviewasia.com/wp-content/uploads/2025/05/Reliance-Jio-Seeks-DoTs-Approval-to-Use-26-GHz-Spectrum-for-Wi-Fi-Services.jpg" style="display: block; height: auto; border: 0; width: 100%; border-radius: 8px;" width="180" alt="" title="" height="auto"></div>
+																	<div style="max-width: 180px;"><img src="./5g.png" style="display: block; height: auto; border: 0; width: 100%; border-radius: 8px;" width="180" alt="" title="" height="auto"></div>
 																</div>
 															</td>
 														</tr>
