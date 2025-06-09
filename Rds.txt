@@ -1,0 +1,335 @@
+#10-------------
+# Load libraries 
+library(tidyverse) 
+library(tidytext) 
+library(lubridate) 
+# Sample text data 
+data <- data.frame( 
+text = c("I love this product!", "Terrible service.", "Okay experience.", 
+"Wonderful!", "Worst support ever."), 
+date = as.Date(c("2024-01-10", "2024-01-12", "2024-01-15", "2024-01-18", "2024-01-20")) 
+) 
+# Clean and tokenize 
+data("stop_words") 
+cleaned <- data %>% 
+unnest_tokens(word, text) %>% 
+anti_join(stop_words, by = "word") %>% 
+inner_join(get_sentiments("bing"), by = "word") %>% 
+count(date, sentiment) %>% 
+pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+mutate(score = positive - negative, 
+label = case_when(score > 0 ~ "Positive", score < 0 ~ "Negative", TRUE ~ "Neutral")) 
+# Trend plot 
+ggplot(cleaned, aes(x = date, y = score, fill = label)) + 
+geom_col() + 
+scale_fill_manual(values = c("Positive" = "green", "Negative" = "red", "Neutral" = "gray")) + 
+labs(title = "Sentiment Trend", x = "Date", y = "Score") + 
+theme_minimal() 
+# Pie chart 
+ggplot(cleaned, aes(x = "", fill = label)) + 
+geom_bar(width = 1) + 
+coord_polar("y") + 
+theme_void() + 
+labs(title = "Sentiment Distribution") 
+
+
+------------------------09----------------------------
+Code: 
+# Install and load required package 
+install.packages("arules") 
+library(arules) 
+# Sample transaction data (use your own CSV or dataset if needed) 
+data("Groceries")  # Built-in dataset in 'arules' package 
+# View basic info 
+summary(Groceries) 
+inspect(Groceries[1:5]) 
+# Apply Apriori algorithm to find frequent itemsets 
+frequent_items <- apriori(Groceries, parameter = list(supp = 0.01, target = "frequent itemsets")) 
+inspect(head(frequent_items, 10))  # View top 10 frequent itemsets 
+# Generate association rules 
+rules <- apriori(Groceries, parameter = list(supp = 0.01, conf = 0.5)) 
+inspect(head(rules, 10))  # View top 10 rules 
+# Sort rules by lift (interestingness) 
+sorted_rules <- sort(rules, by = "lift", decreasing = TRUE) 
+inspect(head(sorted_rules, 10))  # Top 10 interesting rules 
+# Optional: Filter rules with specific item 
+inspect(subset(sorted_rules, rhs %in% "whole milk")) 
+# Plotting rules (if you want visuals) 
+install.packages("arulesViz") 
+library(arulesViz) 
+plot(sorted_rules, method = "graph", engine = "htmlwidget") 
+
+
+--------------------------------08----------------------
+# Load required package
+library(caret)
+
+# Prepare binary dataset: Setosa vs Non-Setosa
+data(iris)
+iris$Label <- as.factor(ifelse(iris$Species == "setosa", 1, 0))
+iris_bin <- iris[, -5]
+
+# Train-test split
+set.seed(123)
+idx <- createDataPartition(iris$Label, p = 0.8, list = FALSE)
+train <- iris_bin[idx, ]
+test <- iris_bin[-idx, ]
+
+# Train logistic regression model
+model <- glm(Label ~ ., data = train, family = "binomial")
+
+# Predictions
+prob <- predict(model, test, type = "response")
+pred <- factor(ifelse(prob > 0.5, 1, 0), levels = c(0, 1))
+truth <- test$Label
+
+# Evaluation
+conf <- confusionMatrix(pred, truth, positive = "1")
+print(conf)
+cat(sprintf("Precision: %.2f\nRecall: %.2f\nF1-score: %.2f\n",
+            conf$byClass["Precision"], conf$byClass["Recall"], conf$byClass["F1"]))
+
+
+----------------------------07----------------------------
+# Load required libraries
+library(factoextra)
+library(cluster)
+
+# Load & scale data
+data("iris")
+iris_scaled <- scale(iris[, -5])
+
+# Elbow Method
+set.seed(69)
+elbow <- sapply(1:10, function(k) kmeans(iris_scaled, k, nstart = 5)$tot.withinss)
+plot(1:10, elbow, type = "b", pch = 19)
+
+# K-Means with k = 3
+model <- kmeans(iris_scaled, 3, nstart = 25)
+iris$Cluster <- as.factor(model$cluster)
+
+# Results & Visuals
+print(model$centers)
+table(model$cluster)
+fviz_cluster(model, data = iris_scaled)
+fviz_silhouette(silhouette(model$cluster, dist(iris_scaled)))
+
+
+----------------------------06-----------------
+
+install.packages("tm") 
+install.packages("SnowballC") 
+install.packages("caret") 
+install.packages("e1071") 
+library(tm)        
+# Text Mining 
+library(SnowballC) # Stemming 
+library(caret)     
+# Evaluation metrics 
+library(e1071)     
+# Naïve Bayes classifier 
+sms_data <- read.csv("https://raw.githubusercontent.com/jbrownlee/Datasets/master/sms_spam.csv",  
+stringsAsFactors = FALSE) 
+colnames(sms_data) <- c("Label", "Message") 
+sms_data$Label <- factor(sms_data$Label, levels = c("ham", "spam")) 
+head(sms_data) 
+corpus <- VCorpus(VectorSource(sms_data$Message)) 
+clean_text <- function(text) { 
+text <- tm_map(text, content_transformer(tolower))   # Convert to lowercase 
+text <- tm_map(text, removePunctuation)              
+text <- tm_map(text, removeNumbers)                  
+# Remove punctuation 
+# Remove numbers 
+text <- tm_map(text, removeWords, stopwords("english")) # Remove stopwords 
+text <- tm_map(text, stemDocument)                   
+# Apply stemming 
+text <- tm_map(text, stripWhitespace)                
+return(text) 
+} 
+corpus_clean <- clean_text(corpus) 
+dtm <- DocumentTermMatrix(corpus_clean) 
+# Remove extra spaces 
+inspect(dtm[1:5, 1:10])  # Show first 5 messages and first 10 words 
+dtm_matrix <- as.matrix(dtm) 
+dtm_df <- data.frame(dtm_matrix) 
+dtm_df$Label <- sms_data$Label 
+set.seed(123) 
+train_index <- createDataPartition(dtm_df$Label, p = 0.8, list = FALSE) 
+train_data <- dtm_df[train_index, ] 
+test_data <- dtm_df[-train_index, ] 
+train_X <- train_data[, -ncol(train_data)] 
+train_Y <- train_data$Label 
+test_X <- test_data[, -ncol(test_data)] 
+test_Y <- test_data$Label 
+nb_model <- naiveBayes(train_X, train_Y) 
+nb_predictions <- predict(nb_model, test_X) 
+conf_matrix <- confusionMatrix(nb_predictions, test_Y) 
+print(conf_matrix) 
+accuracy <- conf_matrix$overall["Accuracy"] 
+print(paste("Model Accuracy:", round(accuracy * 100, 2), "%"))
+
+-----------------------05--------------------
+install.packages("class") 
+install.packages("ggplot2") 
+install.packages("caret") 
+library(class) 
+library(ggplot2) 
+library(caret) 
+data(iris) 
+head(iris) 
+str(iris) 
+summary(iris) 
+normalize <- function(x) { 
+return((x - min(x)) / (max(x) - min(x))) 
+} 
+iris_norm <- as.data.frame(lapply(iris[, 1:4], normalize)) 
+iris_norm$Species <- iris$Species 
+head(iris_norm) 
+set.seed(123) 
+index <- createDataPartition(iris_norm$Species, p = 0.8, list = FALSE) 
+train_data <- iris_norm[index, ] 
+test_data <- iris_norm[-index, ] 
+train_X <- train_data[, 1:4] 
+test_X <- test_data[, 1:4] 
+train_Y <- train_data$Species 
+test_Y <- test_data$Species 
+evaluate_knn <- function(k) { 
+predictions <- knn(train = train_X, test = test_X, cl = train_Y, k = k) 
+accuracy <- mean(predictions == test_Y) * 100 
+return(accuracy) 
+} 
+k_values <- seq(1, 20, by = 2) 
+accuracy_results <- sapply(k_values, evaluate_knn) 
+results_df <- data.frame(K = k_values, Accuracy = accuracy_results) 
+print(results_df) 
+ggplot(results_df, aes(x = K, y = Accuracy)) + 
+geom_line(color = "blue") + 
+geom_point(color = "red") + 
+labs(title = "KNN Accuracy for Different K Values", 
+x = "Number of Neighbors (K)", 
+y = "Accuracy (%)") + 
+theme_minimal() 
+optimal_k <- 5 
+knn_predictions <- knn(train = train_X, test = test_X, cl = train_Y, k = optimal_k) 
+conf_matrix <- confusionMatrix(knn_predictions, test_Y) 
+print(conf_matrix) 
+
+--------------------04---------------------
+install.packages("rpart") 
+install.packages("rpart.plot") 
+install.packages("ggplot2") 
+install.packages("caret") 
+install.packages("e1071") 
+library(rpart) 
+library(rpart.plot) 
+library(ggplot2) 
+library(caret) 
+library(e1071) 
+data(iris) 
+head(iris) 
+str(iris) 
+set.seed(123) 
+index <- createDataPartition(iris$Species, p = 0.8, list = FALSE) 
+train_data <- iris[index, ] 
+test_data <- iris[-index, ] 
+model <- rpart(Species ~ ., data = train_data, method = "class") 
+rpart.plot(model, main = "Decision Tree for Iris Classification", extra = 104) 
+predictions <- predict(model, test_data, type = "class") 
+conf_matrix <- confusionMatrix(predictions, test_data$Species) 
+print(conf_matrix) 
+plot_data <- expand.grid(Sepal.Length = seq(min(iris$Sepal.Length), max(iris$Sepal.Length), by 
+= 0.1), 
+Sepal.Width = seq(min(iris$Sepal.Width), max(iris$Sepal.Width), by = 
+0.1)) 
+plot_data$Species <- predict(model, plot_data, type = "class") 
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
+geom_point() + 
+geom_tile(data = plot_data, aes(fill = Species), alpha = 0.2) + 
+labs(title = "Decision Tree Boundaries for Sepal Features") + 
+theme_minimal()
+
+----------------03------------------------
+install.packages("ggplot2") 
+install.packages("titanic") 
+install.packages("dplyr") 
+library(ggplot2) 
+library(titanic) 
+library(dplyr) 
+data <- titanic::titanic_train 
+head(data) 
+ggplot(data, aes(x = Age)) + 
+geom_histogram(binwidth = 5, fill = "steelblue", color = "black", alpha = 0.7) + 
+labs(title = "Distribution of Age", x = "Age", y = "Count") + 
+theme_minimal() 
+ggplot(data, aes(x = Sex, fill = factor(Survived))) + 
+geom_bar(position = "dodge") + 
+labs(title = "Survival Count by Gender", x = "Gender", y = "Count", fill = "Survived") + 
+scale_fill_manual(values = c("red", "green")) + 
+theme_minimal() 
+ggplot(data, aes(x = factor(Pclass), y = Fare, fill = factor(Pclass))) + 
+geom_boxplot() + 
+labs(title = "Fare Distribution by Passenger Class", x = "Passenger Class", y = "Fare") + 
+theme_minimal() 
+ggplot(data, aes(x = factor(Pclass), fill = factor(Survived))) + 
+geom_bar(position = "fill") + 
+labs(title = "Survival Rate by Passenger Class", x = "Passenger Class", y = "Proportion", 
+fill = "Survived") + 
+scale_fill_manual(values = c("red", "green")) + 
+theme_minimal() 
+ggplot(data, aes(x = Age, y = Fare, color = factor(Survived))) + 
+geom_point(alpha = 0.6) + 
+labs(title = "Age vs. Fare with Survival", x = "Age", y = "Fare", color = "Survived") + 
+theme_minimal() 
+
+-----------02--------------
+
+install.packages("titanic") 
+install.packages("dplyr") 
+library(titanic) 
+library(dplyr) 
+data <- titanic::titanic_train 
+head(data) 
+summary(data[, sapply(data, is.numeric)]) 
+mean(data$Age, na.rm = TRUE) 
+median(data$Age, na.rm = TRUE) 
+sd(data$Age, na.rm = TRUE) 
+var(data$Age, na.rm = TRUE) 
+range(data$Age, na.rm = TRUE) 
+IQR(data$Age, na.rm = TRUE) 
+stats <- data %>% 
+summarise( 
+Mean_Age = mean(Age, na.rm = TRUE), 
+Median_Age = median(Age, na.rm = TRUE), 
+SD_Age = sd(Age, na.rm = TRUE), 
+Mean_Fare = mean(Fare, na.rm = TRUE), 
+Median_Fare = median(Fare, na.rm = TRUE), 
+SD_Fare = sd(Fare, na.rm = TRUE) 
+) 
+print(stats) 
+
+----------01-----------------
+install.packages("titanic") 
+install.packages("dplyr") 
+library(titanic) 
+library(dplyr) 
+# Load dataset 
+data <- titanic::titanic_train 
+head(data) 
+# Summary of missing values 
+colSums(is.na(data)) 
+# Fill missing Age values with median 
+data$Age[is.na(data$Age)] <- median(data$Age, na.rm = TRUE) 
+# Drop rows with missing Embarked values 
+data <- data %>% filter(!is.na(Embarked)) 
+# Convert Categorical Variables to Factors 
+data$Sex <- as.factor(data$Sex) 
+data$Embarked <- as.factor(data$Embarked) 
+data$Pclass <- as.factor(data$Pclass) 
+# Feature Engineering 
+data$FamilySize <- data$SibSp + data$Parch + 1 
+# Create an Indicator for Alone Passengers 
+data$IsAlone <- ifelse(data$FamilySize == 1, 1, 0) 
+# Normalize Fare 
+data$Fare <- scale(data$Fare) 
+str(data)   
+summary(data)  
